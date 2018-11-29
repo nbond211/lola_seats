@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.seatGroupContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.seatGroup {
+    display: flex;
+}

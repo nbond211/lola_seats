@@ -5,9 +5,10 @@ class Seat extends Component {
 
   render() {
 
+    const { id, isOccupied, isPremium, isOverWing, selectedSeatId } = this.props;
+
     return (
-      <div id="Seat">
-        <h1>Seat</h1>
+      <div className="seat">
       </div>
     );
   }
