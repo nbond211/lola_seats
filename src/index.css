@@ -19,15 +19,4 @@ body {
     --occupied-seat-color: #C6C8CC;
     --selected-seat-color: #ECC041;
     --hover-seat-color: #3365c8;
-
-    /* TYPOGRAPHY */
-    /*--font-family: 'News-Gothic', sans-serif;*/
-    /*--italic-style: italic;*/
-    /*--body-weight: normal;*/
-    /*--bold-weight: bold;*/
-
-    --lg-size: 1.625rem;
-    --md-size: 1.125rem;
-    --sm-size: 0.875rem;
-
 }
