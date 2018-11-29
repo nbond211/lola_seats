@@ -1,3 +1,11 @@
+.cabin {
+    margin-bottom: 100px;
+}
+
+.cabin:last-of-type {
+    margin-bottom: 0;
+}
+
 .letterLabelRow {
     display: flex;
     justify-content: space-around;

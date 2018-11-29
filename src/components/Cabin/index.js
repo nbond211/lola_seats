@@ -37,8 +37,8 @@ class Cabin extends Component {
     });
 
     return (
-      <div id="Cabin">
-        <p>{cabinClass}</p>
+      <div className="cabin">
+        <p className="cabinClass">{`${cabinClass} Class`}</p>
         <div className="letterLabelRow">{letterLabelComponents}</div>
         { rowComponents }
       </div>

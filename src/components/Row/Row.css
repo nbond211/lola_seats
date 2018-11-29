@@ -19,3 +19,11 @@
 .seatGroup {
     display: flex;
 }
+
+.cabinClass {
+    background-color: var(--occupied-seat-color);
+    text-align: center;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 800;
+}
