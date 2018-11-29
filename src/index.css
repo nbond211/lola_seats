@@ -18,6 +18,7 @@ body {
     --available-seat-color: #378DF8;
     --occupied-seat-color: #C6C8CC;
     --selected-seat-color: #ECC041;
+    --hover-seat-color: #3365c8;
 
     /* TYPOGRAPHY */
     /*--font-family: 'News-Gothic', sans-serif;*/

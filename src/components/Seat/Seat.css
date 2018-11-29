@@ -12,6 +12,11 @@
     background-color: var(--available-seat-color);
 }
 
+.available:hover {
+    background-color: var(--hover-seat-color);
+    cursor: pointer;
+}
+
 .occupied {
     background-color: var(--occupied-seat-color);
 }
