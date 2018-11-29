@@ -5,7 +5,7 @@ class SideBar extends Component {
 
   render() {
 
-    const { selectedSeatId } = this.props;
+    const { allSeats, selectedSeatId } = this.props;
 
     return (
       <div id="SideBar">

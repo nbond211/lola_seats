@@ -3,6 +3,7 @@ import './App.css';
 import prepSeatData from "./utils/PrepSeatData";
 import rawSeatData from "./data/seats";
 import SeatMap from "./components/SeatMap";
+import SideBar from "./components/SideBar";
 
 class App extends Component {
   constructor(props) {
@@ -26,14 +27,24 @@ class App extends Component {
     const { isDataLoaded, businessData, firstData, economyData, allSeats, selectedSeatId } = this.state;
 
     return (
-      <div className="App">
-        <SeatMap
-          isDataLoaded={ isDataLoaded }
-          businessData={ businessData }
-          firstData={ firstData }
-          economyData={ economyData }
-          selectedSeatId={ selectedSeatId }
-        />
+      <div id="App">
+        {isDataLoaded && [
+            <SideBar
+              key="SideBar"
+              selectedSeatId={ selectedSeatId }
+              allSeats={ allSeats }
+            />,
+
+            <SeatMap
+              key="SeatMap"
+              businessData={ businessData }
+              firstData={ firstData }
+              economyData={ economyData }
+              selectedSeatId={ selectedSeatId }
+            />
+          ]
+        }
+
       </div>
     );
   }
