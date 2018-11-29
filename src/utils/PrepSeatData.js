@@ -4,7 +4,7 @@ function addIdToSeat(seat) {
   return seat;
 }
 
-function formatRowsObject(rowsObject, currentSeat) {
+function formatRowsObject(rowsObject, currentSeat, allSeatsObject) {
   const rowNumber = currentSeat.row.toString();
   const formattedSeat = addIdToSeat(currentSeat);
 
@@ -15,6 +15,8 @@ function formatRowsObject(rowsObject, currentSeat) {
   else {
     rowsObject[rowNumber] = [formattedSeat];
   }
+
+  allSeatsObject[formattedSeat.id] = formattedSeat;
 
   return rowsObject;
 }
@@ -27,12 +29,13 @@ function formatSeatLettersSet(seatLettersSet, seat) {
 
 function formatCabinObject(acc, currentSeat) {
   const currentSeatClass = currentSeat.class;
+  const allSeatsObject = acc.allSeats;
 
   if (acc.hasOwnProperty(currentSeatClass)) {
     const cabinObject = acc[currentSeatClass];
 
     const rowsObject = cabinObject.rows;
-    cabinObject.rows = formatRowsObject(rowsObject, currentSeat);
+    cabinObject.rows = formatRowsObject(rowsObject, currentSeat, allSeatsObject);
 
     const seatLettersSet = cabinObject.seatLetters;
     cabinObject.seatLetters = formatSeatLettersSet(seatLettersSet, currentSeat);
@@ -41,7 +44,7 @@ function formatCabinObject(acc, currentSeat) {
   }
   else {
     const cabinObject = {};
-    cabinObject.rows = formatRowsObject({}, currentSeat);
+    cabinObject.rows = formatRowsObject({}, currentSeat, allSeatsObject);
     cabinObject.seatLetters = formatSeatLettersSet(new Set([]), currentSeat);
     acc[currentSeatClass] = cabinObject;
   }
@@ -50,6 +53,6 @@ function formatCabinObject(acc, currentSeat) {
 }
 
 export default function(rawSeatData) {
-  return rawSeatData.reduce(formatCabinObject, {});
+  return rawSeatData.reduce(formatCabinObject, { allSeats: {} });
 }
 
