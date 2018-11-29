@@ -36,6 +36,7 @@ class Row extends Component {
       <div className="row">
         <p className="rowNumber">{rowNumber}</p>
         <div className="seatGroupContainer">{seatComponents}</div>
+        <p className="rowNumber">{rowNumber}</p>
       </div>
     );
   }
