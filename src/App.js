@@ -23,6 +23,10 @@ class App extends Component {
     });
   }
 
+  selectSeat = newSelectedSeatId => {
+    this.setState({selectedSeatId: newSelectedSeatId});
+  };
+
   render() {
     const { isDataLoaded, businessData, firstData, economyData, allSeats, selectedSeatId } = this.state;
 
@@ -41,6 +45,7 @@ class App extends Component {
               firstData={ firstData }
               economyData={ economyData }
               selectedSeatId={ selectedSeatId }
+              selectSeat={ this.selectSeat }
             />
           ]
         }

@@ -4,7 +4,7 @@ import Cabin from "../Cabin";
 
 class SeatMap extends Component {
   render() {
-    const { businessData, firstData, economyData, selectedSeatId } = this.props;
+    const { businessData, firstData, economyData, selectedSeatId, selectSeat } = this.props;
 
     return (
       <div id="SeatMap">
@@ -13,18 +13,21 @@ class SeatMap extends Component {
           seatLetters={ firstData.seatLetters }
           rows={ firstData.rows }
           selectedSeatId={ selectedSeatId }
+          selectSeat={ selectSeat }
         />
         <Cabin
           cabinClass="Business"
           seatLetters={ businessData.seatLetters }
           rows={ businessData.rows }
           selectedSeatId={ selectedSeatId }
+          selectSeat={ selectSeat }
         />
         <Cabin
           cabinClass="Economy"
           seatLetters={ economyData.seatLetters }
           rows={ economyData.rows }
           selectedSeatId={ selectedSeatId }
+          selectSeat={ selectSeat }
         />
       </div>
     );

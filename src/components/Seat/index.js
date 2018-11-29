@@ -4,11 +4,10 @@ import "./Seat.css";
 class Seat extends Component {
 
   render() {
-
-    const { id, isOccupied, isPremium, isOverWing, selectedSeatId } = this.props;
+    const { id, isOccupied, isPremium, isOverWing, selectedSeatId, selectSeat } = this.props;
 
     return (
-      <div className="seat">
+      <div className="seat" onClick={() => selectSeat(id)}>
       </div>
     );
   }

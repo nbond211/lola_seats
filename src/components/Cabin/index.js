@@ -12,7 +12,7 @@ class Cabin extends Component {
   }
 
   render() {
-    const { cabinClass, rows, selectedSeatId } = this.props;
+    const { cabinClass, rows, selectedSeatId, selectSeat } = this.props;
     const { seatLetterGrouping } = this.state;
 
     const letterLabelComponents = seatLetterGrouping.map(group => {
@@ -32,6 +32,7 @@ class Cabin extends Component {
         seats={ seats }
         seatLetterGrouping={ seatLetterGrouping }
         selectedSeatId={ selectedSeatId }
+        selectSeat={ selectSeat }
       />;
     });
 

@@ -12,7 +12,7 @@ class Row extends Component {
   }
 
   render() {
-    const { rowNumber, selectedSeatId } = this.props;
+    const { rowNumber, selectedSeatId, selectSeat } = this.props;
     const { seatGrouping } = this.state;
 
     const seatComponents = seatGrouping.map(seatGroup => {
@@ -26,6 +26,7 @@ class Row extends Component {
             isPremium={ seat.premium }
             isOverWing={ seat.overWing }
             selectedSeatId={ selectedSeatId }
+            selectSeat={ selectSeat }
           />)}
         </div>
       );
