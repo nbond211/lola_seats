@@ -1,12 +1,19 @@
+function addIdToSeat(seat) {
+  const id = seat.seat + seat.row.toString();
+  seat.id = id;
+  return seat;
+}
+
 function formatRowsObject(rowsObject, currentSeat) {
   const rowNumber = currentSeat.row.toString();
+  const formattedSeat = addIdToSeat(currentSeat);
 
   if (rowsObject.hasOwnProperty(rowNumber)) {
     const seatsArray = rowsObject[rowNumber];
-    rowsObject[rowNumber] = seatsArray.concat([currentSeat]);
+    rowsObject[rowNumber] = seatsArray.concat([formattedSeat]);
   }
   else {
-    rowsObject[rowNumber] = [currentSeat];
+    rowsObject[rowNumber] = [formattedSeat];
   }
 
   return rowsObject;
