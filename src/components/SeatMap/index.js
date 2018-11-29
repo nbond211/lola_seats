@@ -21,13 +21,13 @@ class SeatMap extends Component {
   }
 
   render() {
-    const { businessData, firstData, economyData} = this.state;
+    const { businessData, firstData, economyData, selectedSeatId} = this.state;
 
     return (
       <div id="SeatMap">
-        <Cabin cabinClass="Business" data={ businessData }/>
-        <Cabin cabinClass="First" data={ firstData }/>
-        <Cabin cabinClass="Economy" data={ economyData }/>
+        <Cabin cabinClass="Business" seatData={ businessData } selectedSeatId={ selectedSeatId }/>
+        <Cabin cabinClass="First" seatData={ firstData } selectedSeatId={ selectedSeatId }/>
+        <Cabin cabinClass="Economy" seatData={ economyData } selectedSeatId={ selectedSeatId }/>
       </div>
     );
   }
