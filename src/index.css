@@ -12,8 +12,12 @@ body {
 
 :root {
     /* COLORS */
-    --seat-map-background-color: #e8e8e9;
-    --sidebar-background-color: #f5f5f5;
+    --seat-map-background-color: #F4F4F5;
+    --sidebar-background-color: #fff;
+
+    --available-seat-color: #378DF8;
+    --occupied-seat-color: #C6C8CC;
+    --selected-seat-color: #ECC041;
 
     /* TYPOGRAPHY */
     /*--font-family: 'News-Gothic', sans-serif;*/

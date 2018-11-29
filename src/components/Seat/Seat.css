@@ -1,7 +1,25 @@
 .seat {
     height: 50px;
     width: 50px;
-    background-color: #378DF8;
     border-radius: 50%;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.available {
+    background-color: var(--available-seat-color);
+}
+
+.occupied {
+    background-color: var(--occupied-seat-color);
+}
+
+.selected {
+    background-color: var(--selected-seat-color);
+}
+
+.occupiedIcon {
+    height: 70%;
 }
