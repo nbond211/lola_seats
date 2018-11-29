@@ -1,6 +1,7 @@
 .seat {
     height: 50px;
     width: 50px;
+    background-color: #378DF8;
     border-radius: 50%;
-    border: 1px black solid;
+    margin: 10px;
 }

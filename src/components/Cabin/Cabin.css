@@ -2,3 +2,14 @@
     display: flex;
     justify-content: space-around;
 }
+
+.letterLabelGroup {
+    display: flex;
+}
+
+.letterLabel {
+    width: 50px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
