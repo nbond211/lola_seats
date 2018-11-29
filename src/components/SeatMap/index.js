@@ -1,28 +1,10 @@
 import React, { Component } from "react";
 import "./SeatMap.css";
-import prepSeatData from "../../utils/PrepSeatData";
-import rawSeatData from "../../data/seats.json";
 import Cabin from "../Cabin";
 
 class SeatMap extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isDateLoaded: false, selectedSeatId: "" };
-  }
-
-  componentDidMount() {
-    const formattedSeatData = prepSeatData(rawSeatData);
-
-    this.setState({
-      isDataLoaded: true,
-      businessData: formattedSeatData["Business"],
-      firstData: formattedSeatData["First"],
-      economyData: formattedSeatData["Economy"]
-    });
-  }
-
   render() {
-    const { isDataLoaded, businessData, firstData, economyData, selectedSeatId} = this.state;
+    const { isDataLoaded, businessData, firstData, economyData, selectedSeatId } = this.props;
 
     return (
       <div id="SeatMap">
