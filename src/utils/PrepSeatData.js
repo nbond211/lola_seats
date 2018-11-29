@@ -25,31 +25,31 @@ function formatSeatLettersSet(seatLettersSet, seat) {
   return seatLettersSet;
 }
 
-function formatSeatClassObject(acc, currentSeat) {
+function formatCabinObject(acc, currentSeat) {
   const currentSeatClass = currentSeat.class;
 
   if (acc.hasOwnProperty(currentSeatClass)) {
-    const seatClassObject = acc[currentSeatClass];
+    const cabinObject = acc[currentSeatClass];
 
-    const rowsObject = seatClassObject.rows;
-    seatClassObject.rows = formatRowsObject(rowsObject, currentSeat);
+    const rowsObject = cabinObject.rows;
+    cabinObject.rows = formatRowsObject(rowsObject, currentSeat);
 
-    const seatLettersSet = seatClassObject.seatLetters;
-    seatClassObject.seatLetters = formatSeatLettersSet(seatLettersSet, currentSeat);
+    const seatLettersSet = cabinObject.seatLetters;
+    cabinObject.seatLetters = formatSeatLettersSet(seatLettersSet, currentSeat);
 
-    acc[currentSeatClass] = seatClassObject;
+    acc[currentSeatClass] = cabinObject;
   }
   else {
-    const seatClassObject = {};
-    seatClassObject.rows = formatRowsObject({}, currentSeat);
-    seatClassObject.seatLetters = formatSeatLettersSet(new Set([]), currentSeat);
-    acc[currentSeatClass] = seatClassObject;
+    const cabinObject = {};
+    cabinObject.rows = formatRowsObject({}, currentSeat);
+    cabinObject.seatLetters = formatSeatLettersSet(new Set([]), currentSeat);
+    acc[currentSeatClass] = cabinObject;
   }
 
   return acc;
 }
 
 export default function(rawSeatData) {
-  return rawSeatData.reduce(formatSeatClassObject, {});
+  return rawSeatData.reduce(formatCabinObject, {});
 }
 
