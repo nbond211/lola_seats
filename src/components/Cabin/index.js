@@ -7,14 +7,15 @@ class Cabin extends Component {
   constructor(props) {
     super(props);
     const { seatLetters } = props;
-    const seatLetterGroupings = groupSeatLetters(seatLetters);
-    this.state = { seatLetterGroupings };
+    const seatLetterGrouping = groupSeatLetters(seatLetters);
+    this.state = { seatLetterGrouping };
   }
 
   render() {
-    const { cabinClass, seatLetters, rows, selectedSeatId } = this.props;
+    const { cabinClass, rows, selectedSeatId } = this.props;
+    const { seatLetterGrouping } = this.state;
 
-    const letterLabelComponents = this.state.seatLetterGroupings.map(group => {
+    const letterLabelComponents = seatLetterGrouping.map(group => {
       return (
         <div className="letterLabelGroup">
           {group.map(letter => <span className="letterLabel">{letter}</span>)}
@@ -29,7 +30,7 @@ class Cabin extends Component {
         key={"row" + rowNumber}
         rowNumber={ rowNumber }
         seats={ seats }
-        seatLetters={ seatLetters }
+        seatLetterGrouping={ seatLetterGrouping }
         selectedSeatId={ selectedSeatId }
       />;
     });
