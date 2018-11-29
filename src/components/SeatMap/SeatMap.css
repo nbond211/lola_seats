@@ -1,3 +1,5 @@
 #SeatMap {
     background-color: var(--seat-map-background-color);
+    flex: 1 1 auto;
+    overflow: auto;
 }
