@@ -7,3 +7,9 @@
     max-width: 500px;
     z-index: 2;
 }
+
+.sideBarTitle {
+    font-size: 25px;
+    font-weight: 800;
+    margin-left: 15px;
+}

@@ -29,6 +29,7 @@ class SideBar extends Component {
 
     return (
       <div id="SideBar">
+        <h3 className="sideBarTitle">Select Your Seat</h3>
         <Legend/>
         {selectedSeatSection}
       </div>
