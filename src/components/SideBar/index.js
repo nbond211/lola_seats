@@ -29,10 +29,8 @@ class SideBar extends Component {
 
     return (
       <div id="SideBar">
-        <div className="SidebarContent">
-          <Legend/>
-          {selectedSeatSection}
-        </div>
+        <Legend/>
+        {selectedSeatSection}
       </div>
     );
   }
