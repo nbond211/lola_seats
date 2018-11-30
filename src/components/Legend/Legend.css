@@ -1,3 +1,9 @@
+#Legend {
+    border-top: 1px solid var(--sidebar-border-color);
+    border-bottom: 1px solid var(--sidebar-border-color);
+    padding: 10px 0 5px 0;
+}
+
 .legendTitle {
     font-size: 16px;
     margin: 0 0 0 15px;

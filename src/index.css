@@ -14,6 +14,7 @@ body {
     /* COLORS */
     --seat-map-background-color: #F4F4F5;
     --sidebar-background-color: #fff;
+    --sidebar-border-color: #d2d1d1;
 
     --available-seat-color: #378DF8;
     --occupied-seat-color: #C6C8CC;
