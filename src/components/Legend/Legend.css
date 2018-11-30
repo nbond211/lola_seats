@@ -1,0 +1,27 @@
+.legendTitle {
+    font-size: 16px;
+    margin: 0 0 0 15px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+}
+
+.legendCircle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legendAvailable {
+    background-color: var(--available-seat-color);
+}
+
+.legendOccupied {
+    background-color: var(--occupied-seat-color);
+}

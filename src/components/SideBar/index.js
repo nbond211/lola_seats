@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./SideBar.css";
+import Legend from "../Legend";
 
 class SideBar extends Component {
 
@@ -29,6 +30,7 @@ class SideBar extends Component {
     return (
       <div id="SideBar">
         <div className="SidebarContent">
+          <Legend/>
           {selectedSeatSection}
         </div>
       </div>
