@@ -5,7 +5,7 @@ import occupiedIcon from "../../assets/occupied-icon.png";
 class Seat extends Component {
 
   render() {
-    const { id, isOccupied, selectedSeatId, selectSeat } = this.props;
+    const { id, isOccupied, selectedSeatId, selectSeat, cabinClass } = this.props;
     const isSelected = id === selectedSeatId;
 
     let seatClassName = "available";
@@ -20,7 +20,7 @@ class Seat extends Component {
     }
 
     return (
-      <div className={`seat ${seatClassName}`} onClick={onClick}>
+      <div className={`seat ${seatClassName} ${cabinClass}`} onClick={onClick}>
         {isOccupied && <img className="occupiedIcon" src={occupiedIcon} alt="occupied"/>}
       </div>
     );

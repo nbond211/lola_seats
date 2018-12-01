@@ -16,8 +16,19 @@
 }
 
 .letterLabel {
-    width: 50px;
     margin: 10px;
     display: block;
     text-align: center;
+}
+
+.letterLabel.First {
+    width: 100px;
+}
+
+.letterLabel.Business {
+    width: 75px;
+}
+
+.letterLabel.Economy {
+    width: 50px;
 }

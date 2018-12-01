@@ -1,11 +1,24 @@
 .seat {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.seat.First {
+    height: 100px;
+    width: 100px;
+}
+
+.seat.Business {
+    height: 75px;
+    width: 75px;
+}
+
+.seat.Economy {
+    height: 50px;
+    width: 50px;
 }
 
 .available {

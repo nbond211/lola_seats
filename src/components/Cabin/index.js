@@ -18,7 +18,7 @@ class Cabin extends Component {
     const letterLabelComponents = seatLetterGrouping.map(group => {
       return (
         <div className="letterLabelGroup">
-          {group.map(letter => <span className="letterLabel">{letter}</span>)}
+          {group.map(letter => <span className={`letterLabel ${cabinClass}`}>{letter}</span>)}
         </div>
       );
     });

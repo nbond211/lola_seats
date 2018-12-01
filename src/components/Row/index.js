@@ -23,8 +23,7 @@ class Row extends Component {
             key={ seat.id }
             id={ seat.id }
             isOccupied={ seat.occupied }
-            isPremium={ seat.premium }
-            isOverWing={ seat.overWing }
+            cabinClass={ seat.class }
             selectedSeatId={ selectedSeatId }
             selectSeat={ selectSeat }
           />)}
