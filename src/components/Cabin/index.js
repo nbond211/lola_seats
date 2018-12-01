@@ -41,6 +41,7 @@ class Cabin extends Component {
         <p className="cabinClass">{`${cabinClass} Class`}</p>
         <div className="letterLabelRow">{letterLabelComponents}</div>
         { rowComponents }
+        <div className="letterLabelRow">{letterLabelComponents}</div>
       </div>
     );
   }
