@@ -13,16 +13,17 @@ class SideBar extends Component {
     if (selectedSeat) {
       selectedSeatSection = (
         <div className="selectedSeatSection">
-          <p>Selected Seat:</p>
-          <h4>Seat {selectedSeatId}</h4>
-          <p>{selectedSeat.class}</p>
+          <h6 className="selectedSeatTitle">Selected Seat:</h6>
+          <h4 className="selectedSeatId">{selectedSeatId}</h4>
+          <p className="selectedSeatClass">{selectedSeat.class} Class</p>
         </div>
       );
     }
     else {
       selectedSeatSection = (
         <div className="selectedSeatSection">
-          <h4>No Seat Selected</h4>
+          <h6 className="selectedSeatTitle">Selected Seat:</h6>
+          <h4 className="selectedSeatId">None</h4>
         </div>
       );
     }

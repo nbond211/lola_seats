@@ -36,3 +36,28 @@
 .disabledButton {
     background-color: var(--button-disabled-color);
 }
+
+.selectedSeatSection {
+    padding: 10px 0 5px 0;
+    height: 105px;
+}
+
+.selectedSeatTitle {
+    font-size: 16px;
+    margin: 0 0 0 15px;
+}
+
+.selectedSeatId {
+    font-size: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+.selectedSeatClass {
+    text-align: center;
+    margin: -15px 0 0 0;
+}
+
+.noSeatSelected {
+    text-align: center;
+}
