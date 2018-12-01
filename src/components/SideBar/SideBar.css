@@ -13,3 +13,26 @@
     font-weight: 800;
     margin-left: 15px;
 }
+
+.saveButton {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.enabledButton {
+     background-color: var(--selected-seat-color);
+ }
+
+.enabledButton:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
+
+.disabledButton {
+    background-color: var(--button-disabled-color);
+}

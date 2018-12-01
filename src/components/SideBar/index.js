@@ -32,6 +32,12 @@ class SideBar extends Component {
         <h3 className="sideBarTitle">Select Your Seat</h3>
         <Legend/>
         {selectedSeatSection}
+        <button
+          className={`saveButton ${selectedSeat ? "enabledButton" : "disabledButton"}`}
+          type="button"
+          disabled={!selectedSeat}>
+          Save Seat
+        </button>
       </div>
     );
   }
